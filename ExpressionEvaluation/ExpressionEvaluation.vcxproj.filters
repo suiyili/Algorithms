@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="parser_factory.cpp">
+      <Filter>parse\parser_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="operator_parser.cpp">
+      <Filter>parse\operator_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="argument_mock.cpp">
+      <Filter>evaluation\operand\mock\argument_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="operand.cpp">
+      <Filter>evaluation\operand</Filter>
+    </ClCompile>
+    <ClCompile Include="argument.cpp">
+      <Filter>evaluation\argument</Filter>
+    </ClCompile>
+    <ClCompile Include="addition.cpp">
+      <Filter>evaluation\operand\addition</Filter>
+    </ClCompile>
+    <ClCompile Include="subtraction.cpp">
+      <Filter>evaluation\operand\subtraction</Filter>
+    </ClCompile>
+    <ClCompile Include="multiplication.cpp">
+      <Filter>evaluation\operand\multiplication</Filter>
+    </ClCompile>
+    <ClCompile Include="division.cpp">
+      <Filter>evaluation\operand\division</Filter>
+    </ClCompile>
+    <ClCompile Include="exponentiation.cpp">
+      <Filter>evaluation\operand\exponentiation</Filter>
+    </ClCompile>
+    <ClCompile Include="custom_function.cpp">
+      <Filter>evaluation\operand\function</Filter>
+    </ClCompile>
+    <ClCompile Include="parse_error.cpp">
+      <Filter>contract\parse_error</Filter>
+    </ClCompile>
+    <ClCompile Include="parameter_not_set_error.cpp">
+      <Filter>contract\parameter_not_set_error</Filter>
+    </ClCompile>
+    <ClCompile Include="parser_factory_mock.cpp">
+      <Filter>parse\mock\parser_factory_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_mock.cpp">
+      <Filter>compile\compiler_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_factory.cpp">
+      <Filter>compile\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="argument_compiler.cpp">
+      <Filter>compile\operand\argument_compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="function_compiler.cpp">
+      <Filter>compile\operand\function_compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="operator_compiler.cpp">
+      <Filter>compile\operand\operator_compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="argument_compiler_mock.cpp">
+      <Filter>evaluation\operand\mock\argument_compiler_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_for_parser_mock.cpp">
+      <Filter>parse\mock\compiler_for_parser_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_factory_mock.cpp">
+      <Filter>parse\mock\compiler_factory_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="calculator.cpp">
+      <Filter>application\calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="expression_parser.cpp">
+      <Filter>parse\expression_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="parser_mock.cpp">
+      <Filter>parse\mock\parser_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="function_parser.cpp">
+      <Filter>parse\function_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="compile_utility.cpp">
+      <Filter>compile\compile_utility</Filter>
+    </ClCompile>
+    <ClCompile Include="parser_factory_test.cpp">
+      <Filter>parse\parser_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="operator_parser_test.cpp">
+      <Filter>parse\operator_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="function_parser_test.cpp">
+      <Filter>parse\function_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="expression_parser_test.cpp">
+      <Filter>parse\expression_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="argument_compiler_test.cpp">
+      <Filter>compile\operand\argument_compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="function_compiler_test.cpp">
+      <Filter>compile\operand\function_compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="operator_compiler_test.cpp">
+      <Filter>compile\operand\operator_compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="function_tests.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="operator_tests.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="parentheses_tests.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="application_test.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="argument_test.cpp">
+      <Filter>evaluation\argument</Filter>
+    </ClCompile>
+    <ClCompile Include="addition_test.cpp">
+      <Filter>evaluation\operand\addition</Filter>
+    </ClCompile>
+    <ClCompile Include="division_test.cpp">
+      <Filter>evaluation\operand\division</Filter>
+    </ClCompile>
+    <ClCompile Include="exponentiation_test.cpp">
+      <Filter>evaluation\operand\exponentiation</Filter>
+    </ClCompile>
+    <ClCompile Include="custom_function_test.cpp">
+      <Filter>evaluation\operand\function</Filter>
+    </ClCompile>
+    <ClCompile Include="multiplication_test.cpp">
+      <Filter>evaluation\operand\multiplication</Filter>
+    </ClCompile>
+    <ClCompile Include="subtraction_test.cpp">
+      <Filter>evaluation\operand\subtraction</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="parser_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="operand_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="parser_factory_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="parser_factory_mock.hpp">
+      <Filter>parse\mock\parser_factory_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="parser_factory.hpp">
+      <Filter>parse\parser_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="operator_parser.hpp">
+      <Filter>parse\operator_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="argument_mock.hpp">
+      <Filter>evaluation\operand\mock\argument_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="operand.hpp">
+      <Filter>evaluation\operand</Filter>
+    </ClInclude>
+    <ClInclude Include="argument.hpp">
+      <Filter>evaluation\argument</Filter>
+    </ClInclude>
+    <ClInclude Include="addition.hpp">
+      <Filter>evaluation\operand\addition</Filter>
+    </ClInclude>
+    <ClInclude Include="subtraction.hpp">
+      <Filter>evaluation\operand\subtraction</Filter>
+    </ClInclude>
+    <ClInclude Include="multiplication.hpp">
+      <Filter>evaluation\operand\multiplication</Filter>
+    </ClInclude>
+    <ClInclude Include="division.hpp">
+      <Filter>evaluation\operand\division</Filter>
+    </ClInclude>
+    <ClInclude Include="exponentiation.hpp">
+      <Filter>evaluation\operand\exponentiation</Filter>
+    </ClInclude>
+    <ClInclude Include="custom_function.hpp">
+      <Filter>evaluation\operand\function</Filter>
+    </ClInclude>
+    <ClInclude Include="parse_error.hpp">
+      <Filter>contract\parse_error</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter_not_set_error.hpp">
+      <Filter>contract\parameter_not_set_error</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler_factory_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler_mock.hpp">
+      <Filter>compile\compiler_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler_factory.hpp">
+      <Filter>compile\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="argument_compiler.hpp">
+      <Filter>compile\operand\argument_compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="function_compiler.hpp">
+      <Filter>compile\operand\function_compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="operator_compiler.hpp">
+      <Filter>compile\operand\operator_compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="argument_compiler_mock.hpp">
+      <Filter>evaluation\operand\mock\argument_compiler_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler_for_parser_mock.hpp">
+      <Filter>parse\mock\compiler_for_parser_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler_factory_mock.hpp">
+      <Filter>parse\mock\compiler_factory_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="calculator.hpp">
+      <Filter>application\calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="expression_parser.hpp">
+      <Filter>parse\expression_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="parser_mock.hpp">
+      <Filter>parse\mock\parser_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="function_parser.hpp">
+      <Filter>parse\function_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="compile_utility.hpp">
+      <Filter>compile\compile_utility</Filter>
+    </ClInclude>
+    <ClInclude Include="parse_utility.hpp">
+      <Filter>parse</Filter>
+    </ClInclude>
+    <ClInclude Include="expression_types.hpp">
+      <Filter>generic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="generic">
+      <UniqueIdentifier>{b624fe04-549b-48c3-abd3-2a7080c40ba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contract">
+      <UniqueIdentifier>{df65bd85-2647-4d8d-abe1-de45838aad19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contract\parameter_not_set_error">
+      <UniqueIdentifier>{e9339cc6-870f-4c40-81cf-a5c7408c7d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contract\parse_error">
+      <UniqueIdentifier>{5673e883-ad05-4c03-a05f-123e6c01ee91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation">
+      <UniqueIdentifier>{341018d5-8c32-458f-9d23-d0af0497e389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand">
+      <UniqueIdentifier>{56ad1635-e765-47b6-8fa4-a1e68f5868d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\argument">
+      <UniqueIdentifier>{19e39ff1-ba8f-46fb-90d2-6954eb7de0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse">
+      <UniqueIdentifier>{7c28020a-5469-43fc-a411-06a33ce916c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\mock">
+      <UniqueIdentifier>{4e77ad77-04b0-4790-a072-5792ffb6ed21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\mock\parser_factory_mock">
+      <UniqueIdentifier>{615cc500-d50b-4c6a-9529-283f3d2f0a4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\mock\compiler_factory_mock">
+      <UniqueIdentifier>{719e4887-beb5-47c3-8ef1-4fbec9dcb767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\mock\compiler_for_parser_mock">
+      <UniqueIdentifier>{d21ce34b-9a36-43ea-a75b-3061362859cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\mock\parser_mock">
+      <UniqueIdentifier>{22484ddf-38dd-4bf3-ba19-2c22ac6a842c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\parser_factory">
+      <UniqueIdentifier>{e6999d3d-cbfd-4e28-8fb7-19809cc038ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\operator_parser">
+      <UniqueIdentifier>{0f1c89ac-5627-4c37-be81-6334c0b5e694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\expression_parser">
+      <UniqueIdentifier>{b922bf80-bb54-4a01-ad1e-1ffd7daaf842}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse\function_parser">
+      <UniqueIdentifier>{ec2a7ab5-2b5d-47c7-86fd-5a49ef47cd8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile">
+      <UniqueIdentifier>{222a9778-5075-410d-9820-f4e9d9c8b0dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile\operand">
+      <UniqueIdentifier>{0de7fb22-47dd-4908-a763-02c1f64c44ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile\operand\argument_compiler">
+      <UniqueIdentifier>{aa062224-068d-4a5c-a4db-d2d9a917efa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile\operand\function_compiler">
+      <UniqueIdentifier>{a691b2c2-583c-41b8-8eb3-41fc236c317a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile\operand\operator_compiler">
+      <UniqueIdentifier>{2ab92f04-2031-47f8-8b92-0438c0101cd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile\factory">
+      <UniqueIdentifier>{2b0279e1-1384-4cfb-9b36-bbffe25e3c9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile\compile_utility">
+      <UniqueIdentifier>{add5ae0e-ea39-4007-a8ea-5166c102ac0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\addition">
+      <UniqueIdentifier>{26de2871-d188-4155-bdde-10f64c5c2c45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\division">
+      <UniqueIdentifier>{57f99543-f518-41d7-a744-c180444b1086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\exponentiation">
+      <UniqueIdentifier>{2f16fb5b-bfa7-42cc-9c90-36f4bfcb2ba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\multiplication">
+      <UniqueIdentifier>{076337fd-006f-4e88-bf3b-939166ce59cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\subtraction">
+      <UniqueIdentifier>{4b877b54-256a-4c85-8b7f-65313af41ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\function">
+      <UniqueIdentifier>{fbcc809d-e2cb-4e6c-ae4e-40681a7c435f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\mock">
+      <UniqueIdentifier>{ccc6cbac-f51e-44da-bbc1-3f6cb48ac9a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\mock\argument_mock">
+      <UniqueIdentifier>{76c9282b-863f-41c0-bd4e-5fac0905c584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="evaluation\operand\mock\argument_compiler_mock">
+      <UniqueIdentifier>{be11a398-94e4-4309-bcf9-ee344324874a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compile\compiler_mock">
+      <UniqueIdentifier>{75a77f63-9760-40a2-bbcc-ba754360565d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application">
+      <UniqueIdentifier>{9677d367-1f59-4167-b680-5dc5c497be0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\calculator">
+      <UniqueIdentifier>{23047f5b-f1a7-42d5-bf8d-4f0fd6dedba3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="subarray_test.cpp">
+      <Filter>support\subarray</Filter>
+    </ClCompile>
+    <ClCompile Include="find_maximum_subarray_test.cpp">
+      <Filter>maximum_subarray\find_maximum_subarray</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="support.hpp">
+      <Filter>support</Filter>
+    </ClInclude>
+    <ClInclude Include="subarray.h">
+      <Filter>support\subarray</Filter>
+    </ClInclude>
+    <ClInclude Include="subarray.hpp">
+      <Filter>support\subarray</Filter>
+    </ClInclude>
+    <ClInclude Include="find_maximum_subarray.hpp">
+      <Filter>maximum_subarray\find_maximum_subarray</Filter>
+    </ClInclude>
+    <ClInclude Include="find_maximum_subarray.h">
+      <Filter>maximum_subarray\find_maximum_subarray</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="support">
+      <UniqueIdentifier>{5f422d93-e239-491b-acfc-960cad4696a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="maximum_subarray">
+      <UniqueIdentifier>{d3a50d9e-0594-4d3a-b50b-37df8be1a717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="support\subarray">
+      <UniqueIdentifier>{3ecf73d7-d800-48fa-b8f8-59c374899e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="maximum_subarray\find_maximum_subarray">
+      <UniqueIdentifier>{41f0979a-4191-4762-bc8b-77f6a8fd0aae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

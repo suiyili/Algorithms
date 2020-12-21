@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CatchOrg.Catch.2.8.0\build\native\CatchOrg.Catch.props" Condition="Exists('..\packages\CatchOrg.Catch.2.8.0\build\native\CatchOrg.Catch.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{9F5671F8-BF1B-4EED-B5E1-0207535581FF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ExpressionEvaluation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\Catch2\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
+      <AdditionalOptions>/permissive- /std:c++latest %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>TEST;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/permissive- /std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="application_test.cpp" />
+    <ClCompile Include="addition.cpp" />
+    <ClCompile Include="addition_test.cpp" />
+    <ClCompile Include="argument.cpp" />
+    <ClCompile Include="argument_compiler.cpp" />
+    <ClCompile Include="argument_compiler_test.cpp" />
+    <ClCompile Include="argument_test.cpp" />
+    <ClCompile Include="compiler_factory.cpp" />
+    <ClCompile Include="compiler_factory_mock.cpp" />
+    <ClCompile Include="argument_compiler_mock.cpp" />
+    <ClCompile Include="compiler_for_parser_mock.cpp" />
+    <ClCompile Include="calculator.cpp" />
+    <ClCompile Include="compiler_mock.cpp" />
+    <ClCompile Include="compile_utility.cpp" />
+    <ClCompile Include="division.cpp" />
+    <ClCompile Include="division_test.cpp" />
+    <ClCompile Include="exponentiation.cpp" />
+    <ClCompile Include="exponentiation_test.cpp" />
+    <ClCompile Include="expression_parser_test.cpp" />
+    <ClCompile Include="custom_function.cpp" />
+    <ClCompile Include="function_compiler.cpp" />
+    <ClCompile Include="function_compiler_test.cpp" />
+    <ClCompile Include="function_parser.cpp" />
+    <ClCompile Include="function_parser_test.cpp" />
+    <ClCompile Include="custom_function_test.cpp" />
+    <ClCompile Include="function_tests.cpp" />
+    <ClCompile Include="multiplication.cpp" />
+    <ClCompile Include="multiplication_test.cpp" />
+    <ClCompile Include="operand.cpp" />
+    <ClCompile Include="operator_parser.cpp" />
+    <ClCompile Include="operator_parser_test.cpp" />
+    <ClCompile Include="operator_tests.cpp" />
+    <ClCompile Include="operator_compiler.cpp" />
+    <ClCompile Include="operator_compiler_test.cpp" />
+    <ClCompile Include="argument_mock.cpp" />
+    <ClCompile Include="parameter_not_set_error.cpp" />
+    <ClCompile Include="parentheses_tests.cpp" />
+    <ClCompile Include="parser_factory.cpp" />
+    <ClCompile Include="parser_factory_mock.cpp" />
+    <ClCompile Include="parser_factory_test.cpp" />
+    <ClCompile Include="parser_mock.cpp" />
+    <ClCompile Include="expression_parser.cpp" />
+    <ClCompile Include="parse_error.cpp" />
+    <ClCompile Include="subtraction.cpp" />
+    <ClCompile Include="subtraction_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="addition.hpp" />
+    <ClInclude Include="argument.hpp" />
+    <ClInclude Include="argument_compiler.hpp" />
+    <ClInclude Include="compiler_factory.hpp" />
+    <ClInclude Include="compiler_factory_i.hpp" />
+    <ClInclude Include="compiler_factory_mock.hpp" />
+    <ClInclude Include="argument_compiler_mock.hpp" />
+    <ClInclude Include="compiler_for_parser_mock.hpp" />
+    <ClInclude Include="calculator.hpp" />
+    <ClInclude Include="compiler_i.hpp" />
+    <ClInclude Include="compiler_mock.hpp" />
+    <ClInclude Include="compile_utility.hpp" />
+    <ClInclude Include="division.hpp" />
+    <ClInclude Include="expression_types.hpp" />
+    <ClInclude Include="exponentiation.hpp" />
+    <ClInclude Include="custom_function.hpp" />
+    <ClInclude Include="function_compiler.hpp" />
+    <ClInclude Include="function_parser.hpp" />
+    <ClInclude Include="multiplication.hpp" />
+    <ClInclude Include="operand.hpp" />
+    <ClInclude Include="operand_i.hpp" />
+    <ClInclude Include="operator_parser.hpp" />
+    <ClInclude Include="operator_compiler.hpp" />
+    <ClInclude Include="argument_mock.hpp" />
+    <ClInclude Include="parameter_not_set_error.hpp" />
+    <ClInclude Include="parser_factory.hpp" />
+    <ClInclude Include="parser_factory_i.hpp" />
+    <ClInclude Include="parser_factory_mock.hpp" />
+    <ClInclude Include="parser_i.hpp" />
+    <ClInclude Include="parser_mock.hpp" />
+    <ClInclude Include="expression_parser.hpp" />
+    <ClInclude Include="parse_error.hpp" />
+    <ClInclude Include="parse_utility.hpp" />
+    <ClInclude Include="subtraction.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\CatchOrg.Catch.2.8.0\build\native\CatchOrg.Catch.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CatchOrg.Catch.2.8.0\build\native\CatchOrg.Catch.props'))" />
+  </Target>
+</Project>

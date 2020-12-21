@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="kmp">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="kmp\pattern">
+      <UniqueIdentifier>{40ce2423-fbaf-42c3-a4a7-61cc31321898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trie">
+      <UniqueIdentifier>{99b613bb-6871-43da-9998-b7cd78d4a436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trie\trie_node">
+      <UniqueIdentifier>{44f56af4-f66b-4758-96e8-2d749ae1f3e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic">
+      <UniqueIdentifier>{c571b539-af83-4f11-81f2-154c6437fa9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\resource_manager">
+      <UniqueIdentifier>{0d8d407b-9102-4a73-abb0-4e9371049fb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trie\trie_node\leaf_node">
+      <UniqueIdentifier>{8a37c910-3e2c-4fff-9f36-ac173db5f0f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trie\trie_node\stem_node">
+      <UniqueIdentifier>{8076de79-4ce0-4afd-9ed0-f2a02647a241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trie\trie_node\stem_node\end_node">
+      <UniqueIdentifier>{4a8701c4-3c19-4e13-845a-95cd65ce034c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trie\trie_node\stem_node\middle_node">
+      <UniqueIdentifier>{93d5d5f1-0415-4b5d-845c-b855115ac467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trie\trie_node\trie_node_mock">
+      <UniqueIdentifier>{08ddf792-bf88-4206-890b-37cdce176de4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kmp_test.cpp">
+      <Filter>kmp</Filter>
+    </ClCompile>
+    <ClCompile Include="kmp_search.cpp">
+      <Filter>kmp</Filter>
+    </ClCompile>
+    <ClCompile Include="kmp_pattern.cpp">
+      <Filter>kmp\pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="kmp_pattern_test.cpp">
+      <Filter>kmp\pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="trie_node.cpp">
+      <Filter>trie\trie_node</Filter>
+    </ClCompile>
+    <ClCompile Include="trie_node_test.cpp">
+      <Filter>trie\trie_node</Filter>
+    </ClCompile>
+    <ClCompile Include="resource_manager.cpp">
+      <Filter>generic\resource_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="leaf_node.cpp">
+      <Filter>trie\trie_node\leaf_node</Filter>
+    </ClCompile>
+    <ClCompile Include="stem_node.cpp">
+      <Filter>trie\trie_node\stem_node</Filter>
+    </ClCompile>
+    <ClCompile Include="middle_node.cpp">
+      <Filter>trie\trie_node\stem_node\middle_node</Filter>
+    </ClCompile>
+    <ClCompile Include="end_node.cpp">
+      <Filter>trie\trie_node\stem_node\end_node</Filter>
+    </ClCompile>
+    <ClCompile Include="suffix_trie.cpp">
+      <Filter>trie</Filter>
+    </ClCompile>
+    <ClCompile Include="suffix_trie_test.cpp">
+      <Filter>trie</Filter>
+    </ClCompile>
+    <ClCompile Include="leaf_node_test.cpp">
+      <Filter>trie\trie_node\leaf_node</Filter>
+    </ClCompile>
+    <ClCompile Include="trie_node_mock.cpp">
+      <Filter>trie\trie_node\trie_node_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="stem_node_test.cpp">
+      <Filter>trie\trie_node\stem_node</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kmp_search.hpp">
+      <Filter>kmp</Filter>
+    </ClInclude>
+    <ClInclude Include="kmp_pattern.hpp">
+      <Filter>kmp\pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="trie_node.hpp">
+      <Filter>trie\trie_node</Filter>
+    </ClInclude>
+    <ClInclude Include="pattern_match_types.hpp">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="resource_manager.hpp">
+      <Filter>generic\resource_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="leaf_node.hpp">
+      <Filter>trie\trie_node\leaf_node</Filter>
+    </ClInclude>
+    <ClInclude Include="stem_node.hpp">
+      <Filter>trie\trie_node\stem_node</Filter>
+    </ClInclude>
+    <ClInclude Include="middle_node.hpp">
+      <Filter>trie\trie_node\stem_node\middle_node</Filter>
+    </ClInclude>
+    <ClInclude Include="end_node.hpp">
+      <Filter>trie\trie_node\stem_node\end_node</Filter>
+    </ClInclude>
+    <ClInclude Include="suffix_trie.hpp">
+      <Filter>trie</Filter>
+    </ClInclude>
+    <ClInclude Include="trie_node_mock.hpp">
+      <Filter>trie\trie_node\trie_node_mock</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

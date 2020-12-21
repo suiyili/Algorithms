@@ -1,0 +1,16 @@
+PatternMatch
+
+tasks:
+1. tdd common longest match
+
+
+Extra for each project:
+1. refactor all existing projects tests(given-when-then)
+2. remove global using std and library header and use in place
+3. refactor all test to be design/test(definition)/impl
+
+minimum spin tree.
+Graph theory, flow...
+FFT
+Mobius transform lib.
+

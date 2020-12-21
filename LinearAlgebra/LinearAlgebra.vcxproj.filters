@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="bit_analyzer.cpp">
+      <Filter>algebra\generic\bit_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="algebra_exception.cpp">
+      <Filter>algebra\algebra_exception</Filter>
+    </ClCompile>
+    <ClCompile Include="index_submatrix.cpp">
+      <Filter>algebra\matrices\index_matrix\index_submatrix</Filter>
+    </ClCompile>
+    <ClCompile Include="index_source_matrix.cpp">
+      <Filter>algebra\matrices\index_matrix\index_source_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="lu_decompose.cpp">
+      <Filter>algebra\matrices\lu_decompose</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>algebra\matrices\matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="addition.cpp">
+      <Filter>algebra\operations\addition</Filter>
+    </ClCompile>
+    <ClCompile Include="determinant.cpp">
+      <Filter>algebra\operations\determinant</Filter>
+    </ClCompile>
+    <ClCompile Include="equal.cpp">
+      <Filter>algebra\operations\equal</Filter>
+    </ClCompile>
+    <ClCompile Include="exponentiation.cpp">
+      <Filter>algebra\operations\exponentiation</Filter>
+    </ClCompile>
+    <ClCompile Include="identity.cpp">
+      <Filter>algebra\operations\identity</Filter>
+    </ClCompile>
+    <ClCompile Include="inverse.cpp">
+      <Filter>algebra\operations\inverse</Filter>
+    </ClCompile>
+    <ClCompile Include="markov.cpp">
+      <Filter>algebra\operations\markov</Filter>
+    </ClCompile>
+    <ClCompile Include="multiplication.cpp">
+      <Filter>algebra\operations\multiplication</Filter>
+    </ClCompile>
+    <ClCompile Include="scalar.cpp">
+      <Filter>algebra\operations\scalar</Filter>
+    </ClCompile>
+    <ClCompile Include="subtraction.cpp">
+      <Filter>algebra\operations\subtraction</Filter>
+    </ClCompile>
+    <ClCompile Include="transpose.cpp">
+      <Filter>algebra\operations\transpose</Filter>
+    </ClCompile>
+    <ClCompile Include="operations.cpp">
+      <Filter>algebra\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="bit_analyzer_test.cpp">
+      <Filter>algebra\generic\bit_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="index_submatrix_test.cpp">
+      <Filter>algebra\matrices\index_matrix\index_submatrix</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bit_analyzer.hpp">
+      <Filter>algebra\generic\bit_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="algebra_exception.hpp">
+      <Filter>algebra\algebra_exception</Filter>
+    </ClInclude>
+    <ClInclude Include="operations.hpp">
+      <Filter>algebra\operations</Filter>
+    </ClInclude>
+    <ClInclude Include="equal.hpp">
+      <Filter>algebra\operations\equal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.hpp">
+      <Filter>algebra\operations\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="addition.hpp">
+      <Filter>algebra\operations\addition</Filter>
+    </ClInclude>
+    <ClInclude Include="subtraction.hpp">
+      <Filter>algebra\operations\subtraction</Filter>
+    </ClInclude>
+    <ClInclude Include="multiplication.hpp">
+      <Filter>algebra\operations\multiplication</Filter>
+    </ClInclude>
+    <ClInclude Include="scalar.hpp">
+      <Filter>algebra\operations\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.hpp">
+      <Filter>algebra\matrices\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="lu_decompose.hpp">
+      <Filter>algebra\matrices\lu_decompose</Filter>
+    </ClInclude>
+    <ClInclude Include="algebra_types.hpp">
+      <Filter>algebra\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="transpose.hpp">
+      <Filter>algebra\operations\transpose</Filter>
+    </ClInclude>
+    <ClInclude Include="exponentiation.hpp">
+      <Filter>algebra\operations\exponentiation</Filter>
+    </ClInclude>
+    <ClInclude Include="inverse.hpp">
+      <Filter>algebra\operations\inverse</Filter>
+    </ClInclude>
+    <ClInclude Include="identity.hpp">
+      <Filter>algebra\operations\identity</Filter>
+    </ClInclude>
+    <ClInclude Include="determinant.hpp">
+      <Filter>algebra\operations\determinant</Filter>
+    </ClInclude>
+    <ClInclude Include="index_submatrix.hpp">
+      <Filter>algebra\matrices\index_matrix\index_submatrix</Filter>
+    </ClInclude>
+    <ClInclude Include="index_matrix_i.hpp">
+      <Filter>algebra\matrices\index_matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="index_source_matrix.hpp">
+      <Filter>algebra\matrices\index_matrix\index_source_matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="markov.hpp">
+      <Filter>algebra\operations\markov</Filter>
+    </ClInclude>
+    <ClInclude Include="lu_decompose.h">
+      <Filter>algebra\matrices\lu_decompose</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>algebra\matrices\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="addition.h">
+      <Filter>algebra\operations\addition</Filter>
+    </ClInclude>
+    <ClInclude Include="determinant.h">
+      <Filter>algebra\operations\determinant</Filter>
+    </ClInclude>
+    <ClInclude Include="equal.h">
+      <Filter>algebra\operations\equal</Filter>
+    </ClInclude>
+    <ClInclude Include="exponentiation.h">
+      <Filter>algebra\operations\exponentiation</Filter>
+    </ClInclude>
+    <ClInclude Include="identity.h">
+      <Filter>algebra\operations\identity</Filter>
+    </ClInclude>
+    <ClInclude Include="inverse.h">
+      <Filter>algebra\operations\inverse</Filter>
+    </ClInclude>
+    <ClInclude Include="markov.h">
+      <Filter>algebra\operations\markov</Filter>
+    </ClInclude>
+    <ClInclude Include="multiplication.h">
+      <Filter>algebra\operations\multiplication</Filter>
+    </ClInclude>
+    <ClInclude Include="scalar.h">
+      <Filter>algebra\operations\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="subtraction.h">
+      <Filter>algebra\operations\subtraction</Filter>
+    </ClInclude>
+    <ClInclude Include="transpose.h">
+      <Filter>algebra\operations\transpose</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="algebra">
+      <UniqueIdentifier>{6e416142-4c5e-42fd-8430-e9172cb9ac04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations">
+      <UniqueIdentifier>{7729b3ac-752c-4fa8-b052-2c2c684fd7d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\equal">
+      <UniqueIdentifier>{584e3d47-121b-4b7e-88c4-6c9fa9e53609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\utility">
+      <UniqueIdentifier>{2d544ba0-a91a-4427-a8cd-d869f2648aeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\addition">
+      <UniqueIdentifier>{89f72c37-a16e-4f3b-b7da-24e3d68c3a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\subtraction">
+      <UniqueIdentifier>{32fafb7a-3771-41c3-bd81-2d1310e7c811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\multiplication">
+      <UniqueIdentifier>{68de5093-825b-48a0-865a-49be932a7a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\scalar">
+      <UniqueIdentifier>{f231531e-0967-4477-85ea-f35d27af1b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\algebra_exception">
+      <UniqueIdentifier>{a41811b4-0389-455a-a0fd-d36794a2921b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\transpose">
+      <UniqueIdentifier>{2176b1f4-a4ff-454c-908c-c0059c2c23f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\exponentiation">
+      <UniqueIdentifier>{8d8e6303-bb85-413e-80c7-83b07f0fdc0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\inverse">
+      <UniqueIdentifier>{e50fec5f-7d84-4bc2-8af8-00ef4ff7f024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\identity">
+      <UniqueIdentifier>{d1aec89f-9429-4d6b-9328-60e817efc9c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\determinant">
+      <UniqueIdentifier>{fd287241-cbe8-4ad9-b070-e3917c85b454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\matrices">
+      <UniqueIdentifier>{1e042150-e518-4570-bd65-b108e6bf533a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\matrices\index_matrix">
+      <UniqueIdentifier>{a7b6cc79-5c80-4f74-958c-86304939f722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\matrices\index_matrix\index_submatrix">
+      <UniqueIdentifier>{fb2bd813-513b-4ea9-8d5f-75d796e23b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\matrices\index_matrix\index_source_matrix">
+      <UniqueIdentifier>{177d4ef4-7033-4021-a15b-02b4b28b4014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\matrices\lu_decompose">
+      <UniqueIdentifier>{092f961e-7e3d-4d5e-aa2d-3ac986a96f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\matrices\matrix">
+      <UniqueIdentifier>{123097ad-3c42-42db-b66a-f96338212bcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\generic">
+      <UniqueIdentifier>{bbc10efe-5486-4378-8ae4-c6f6540d22e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\generic\bit_analyzer">
+      <UniqueIdentifier>{9a9841af-aa72-4098-b322-2914cf1ca137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algebra\operations\markov">
+      <UniqueIdentifier>{8b7bb9c2-ddf4-4ec6-bf4e-7303c8f99d16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

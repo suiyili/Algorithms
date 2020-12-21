@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="board.cpp">
+      <Filter>game\board</Filter>
+    </ClCompile>
+    <ClCompile Include="cell_factory_mock.cpp">
+      <Filter>game\board\mock\cell_factory_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="cell_mock.cpp">
+      <Filter>game\board\mock\cell_mock</Filter>
+    </ClCompile>
+    <ClCompile Include="cell.cpp">
+      <Filter>game\cell</Filter>
+    </ClCompile>
+    <ClCompile Include="grid.cpp">
+      <Filter>game\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="cell_factory.cpp">
+      <Filter>game\cell_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="board_test.cpp">
+      <Filter>game\board</Filter>
+    </ClCompile>
+    <ClCompile Include="grid_test.cpp">
+      <Filter>game\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="cell_test.cpp">
+      <Filter>game\cell</Filter>
+    </ClCompile>
+    <ClCompile Include="game_test.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cell_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="cell_factory_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="board.hpp">
+      <Filter>game\board</Filter>
+    </ClInclude>
+    <ClInclude Include="cell_factory_mock.hpp">
+      <Filter>game\board\mock\cell_factory_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="cell_mock.hpp">
+      <Filter>game\board\mock\cell_mock</Filter>
+    </ClInclude>
+    <ClInclude Include="cell.hpp">
+      <Filter>game\cell</Filter>
+    </ClInclude>
+    <ClInclude Include="grid.hpp">
+      <Filter>game\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="cell_factory.hpp">
+      <Filter>game\cell_factory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="contract">
+      <UniqueIdentifier>{6d51f91b-d3cf-4090-bbda-9c2fff835626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{42f98b08-8f46-413c-a8b4-7ff1372a7285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\grid">
+      <UniqueIdentifier>{2bd6a890-2f02-40bb-b8d1-6726b5b7cbff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\cell_factory">
+      <UniqueIdentifier>{744b361d-49e7-4ece-a959-8aa716e8d749}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\cell">
+      <UniqueIdentifier>{94bc92c8-fac0-4c7d-9ec1-9d534f48a26d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\board">
+      <UniqueIdentifier>{9f5d1529-1ba7-4bb8-980d-6f1d559d4625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\board\mock">
+      <UniqueIdentifier>{e827a4d6-a574-43e2-bcbc-2fa5ad637a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\board\mock\cell_factory_mock">
+      <UniqueIdentifier>{9b828c3f-f3ba-4964-a324-8fae0ff66788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\board\mock\cell_mock">
+      <UniqueIdentifier>{5352a99b-f928-4dc2-8235-3a06f37eab16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

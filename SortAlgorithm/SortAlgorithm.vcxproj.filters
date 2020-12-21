@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="heapsort_test.cpp">
+      <Filter>sortalgo\heapsort</Filter>
+    </ClCompile>
+    <ClCompile Include="heap_test.cpp">
+      <Filter>sortalgo\heapsort\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="quick_sort_test.cpp">
+      <Filter>sortalgo\quicksort\quick_sort</Filter>
+    </ClCompile>
+    <ClCompile Include="partitioner_test.cpp">
+      <Filter>sortalgo\quicksort\partitioner</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="support.hpp">
+      <Filter>support</Filter>
+    </ClInclude>
+    <ClInclude Include="quick_sorter.hpp">
+      <Filter>sortalgo\quicksort\quick_sort</Filter>
+    </ClInclude>
+    <ClInclude Include="heap.h">
+      <Filter>sortalgo\heapsort\heap</Filter>
+    </ClInclude>
+    <ClInclude Include="heap.hpp">
+      <Filter>sortalgo\heapsort\heap</Filter>
+    </ClInclude>
+    <ClInclude Include="heap_sort.h">
+      <Filter>sortalgo\heapsort\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="heap_sort.hpp">
+      <Filter>sortalgo\heapsort\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="quick_sort.h">
+      <Filter>sortalgo\quicksort\quick_sort</Filter>
+    </ClInclude>
+    <ClInclude Include="quick_sort.hpp">
+      <Filter>sortalgo\quicksort\quick_sort</Filter>
+    </ClInclude>
+    <ClInclude Include="partitioner.h">
+      <Filter>sortalgo\quicksort\partitioner</Filter>
+    </ClInclude>
+    <ClInclude Include="partitioner.hpp">
+      <Filter>sortalgo\quicksort\partitioner</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="support">
+      <UniqueIdentifier>{5b06e40f-f1a6-439a-b9c0-74e42cb88f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sortalgo">
+      <UniqueIdentifier>{f5a25c08-88f7-4a3b-844e-aba0a3a7ccfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sortalgo\heapsort">
+      <UniqueIdentifier>{474aa764-3675-4f49-b97d-e464d66f4262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sortalgo\quicksort">
+      <UniqueIdentifier>{2626eb56-c43f-46fa-817a-c523c6c5edd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sortalgo\heapsort\heap">
+      <UniqueIdentifier>{2efb398a-7ebe-4d63-a2c3-07b7dcb2937b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sortalgo\heapsort\sort">
+      <UniqueIdentifier>{651b55db-4392-4ef9-9626-9027f999c9da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sortalgo\quicksort\quick_sort">
+      <UniqueIdentifier>{0170ecfb-d7d3-4bb3-8560-27b69521bc7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sortalgo\quicksort\partitioner">
+      <UniqueIdentifier>{023e529e-97db-4ed8-862b-e15d72ad1763}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

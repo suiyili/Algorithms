@@ -1,0 +1,25 @@
+#pragma once
+
+#include "spin_lock.hpp"
+
+namespace concurrent
+{
+	class atom final
+	{
+	public:
+		atom() = default;
+		~atom() = default;
+
+		atom(const atom&) = delete;
+		atom& operator=(const atom&) = delete;
+		atom(atom&&) = delete;
+		atom& operator=(atom&&) = delete;
+
+		bool put(void* item);
+		bool take(void*& item);
+
+	private:
+		atomic<void*> item_ = nullptr;
+	};
+
+}

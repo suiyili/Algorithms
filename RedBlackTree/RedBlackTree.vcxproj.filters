@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="insert_graft_test.cpp">
+      <Filter>bbtree\algorithm\insert_graft</Filter>
+    </ClCompile>
+    <ClCompile Include="item_inserter_test.cpp">
+      <Filter>bbtree\algorithm\item_inserter</Filter>
+    </ClCompile>
+    <ClCompile Include="item_remover_test.cpp">
+      <Filter>bbtree\algorithm\item_remover</Filter>
+    </ClCompile>
+    <ClCompile Include="item_handle_test.cpp">
+      <Filter>bbtree\item\item_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="rb_item_test.cpp">
+      <Filter>bbtree\item\rb_item</Filter>
+    </ClCompile>
+    <ClCompile Include="rb_tree_test.cpp">
+      <Filter>bbtree\rb_tree</Filter>
+    </ClCompile>
+    <ClCompile Include="graft_for_removing_test.cpp">
+      <Filter>bbtree\algorithm\remove_graft</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="support">
+      <UniqueIdentifier>{59091c58-2257-496b-b492-5592e5237830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contract">
+      <UniqueIdentifier>{80c26bd2-12ce-4cf2-bb38-63f02b983dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree">
+      <UniqueIdentifier>{32278769-cdc2-4169-9ead-13f7ff48ed10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\rb_tree">
+      <UniqueIdentifier>{5cef1a09-5592-4e57-aa7b-06d82772f63e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\item">
+      <UniqueIdentifier>{f169dfbb-a831-4e08-8bf0-ffadf1c0f599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\item\rb_item">
+      <UniqueIdentifier>{bf427de6-8def-410e-b4d5-5e0d262f3c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\item\item_handle">
+      <UniqueIdentifier>{b4c3ea61-c9fd-4d6e-b02b-ba1b915631d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\algorithm">
+      <UniqueIdentifier>{e5ea67c3-714b-486e-9a1f-debc8411eb00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\algorithm\insert_graft">
+      <UniqueIdentifier>{428e2af6-9716-4f43-9278-8cf9792dd234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\algorithm\item_inserter">
+      <UniqueIdentifier>{58fecd47-3213-4385-818a-36c605f4ffc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\algorithm\item_remover">
+      <UniqueIdentifier>{68955312-9619-4c34-aad3-2d33d8c89ae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bbtree\algorithm\remove_graft">
+      <UniqueIdentifier>{4a6dc407-65b3-4b20-b40f-d5e83b5abee2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="color_error.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="item_already_exists.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="rotate_error.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="insert_graft.hpp">
+      <Filter>bbtree\algorithm\insert_graft</Filter>
+    </ClInclude>
+    <ClInclude Include="rb_item.hpp">
+      <Filter>bbtree\item\rb_item</Filter>
+    </ClInclude>
+    <ClInclude Include="rb_tree.hpp">
+      <Filter>bbtree\rb_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="item_status.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="tree_visitor_i.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="item_inserter.hpp">
+      <Filter>bbtree\algorithm\item_inserter</Filter>
+    </ClInclude>
+    <ClInclude Include="item_remover.hpp">
+      <Filter>bbtree\algorithm\item_remover</Filter>
+    </ClInclude>
+    <ClInclude Include="item_not_exists.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="item_handle.hpp">
+      <Filter>bbtree\item\item_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="domain_types.hpp">
+      <Filter>support</Filter>
+    </ClInclude>
+    <ClInclude Include="rb_item.h">
+      <Filter>bbtree\item\rb_item</Filter>
+    </ClInclude>
+    <ClInclude Include="key_type.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+    <ClInclude Include="item_handle.h">
+      <Filter>bbtree\item\item_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="insert_graft.h">
+      <Filter>bbtree\algorithm\insert_graft</Filter>
+    </ClInclude>
+    <ClInclude Include="rb_tree.h">
+      <Filter>bbtree\rb_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="item_inserter.h">
+      <Filter>bbtree\algorithm\item_inserter</Filter>
+    </ClInclude>
+    <ClInclude Include="item_remover.h">
+      <Filter>bbtree\algorithm\item_remover</Filter>
+    </ClInclude>
+    <ClInclude Include="graft_for_removing.h">
+      <Filter>bbtree\algorithm\remove_graft</Filter>
+    </ClInclude>
+    <ClInclude Include="graft_for_removing.hpp">
+      <Filter>bbtree\algorithm\remove_graft</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

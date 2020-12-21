@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="substraction.cpp">
+      <Filter>arithmatic\operation\substraction</Filter>
+    </ClCompile>
+    <ClCompile Include="addition.cpp">
+      <Filter>arithmatic\operation\addition</Filter>
+    </ClCompile>
+    <ClCompile Include="multiplication.cpp">
+      <Filter>arithmatic\operation\multiplication</Filter>
+    </ClCompile>
+    <ClCompile Include="modulus.cpp">
+      <Filter>arithmatic\operation\modulus</Filter>
+    </ClCompile>
+    <ClCompile Include="division.cpp">
+      <Filter>arithmatic\operation\division</Filter>
+    </ClCompile>
+    <ClCompile Include="bignum.cpp">
+      <Filter>arithmatic\bignum</Filter>
+    </ClCompile>
+    <ClCompile Include="bits_value.cpp">
+      <Filter>arithmatic\bits_value</Filter>
+    </ClCompile>
+    <ClCompile Include="bignum_test.cpp">
+      <Filter>arithmatic\bignum</Filter>
+    </ClCompile>
+    <ClCompile Include="bits_value_test.cpp">
+      <Filter>arithmatic\bits_value</Filter>
+    </ClCompile>
+    <ClCompile Include="operation_test.cpp">
+      <Filter>arithmatic\operation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="substraction.hpp">
+      <Filter>arithmatic\operation\substraction</Filter>
+    </ClInclude>
+    <ClInclude Include="addition.hpp">
+      <Filter>arithmatic\operation\addition</Filter>
+    </ClInclude>
+    <ClInclude Include="operation.hpp">
+      <Filter>arithmatic\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="multiplication.hpp">
+      <Filter>arithmatic\operation\multiplication</Filter>
+    </ClInclude>
+    <ClInclude Include="modulus.hpp">
+      <Filter>arithmatic\operation\modulus</Filter>
+    </ClInclude>
+    <ClInclude Include="division.hpp">
+      <Filter>arithmatic\operation\division</Filter>
+    </ClInclude>
+    <ClInclude Include="bignum.hpp">
+      <Filter>arithmatic\bignum</Filter>
+    </ClInclude>
+    <ClInclude Include="bits_value.hpp">
+      <Filter>arithmatic\bits_value</Filter>
+    </ClInclude>
+    <ClInclude Include="coprime_error.hpp">
+      <Filter>contract</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="contract">
+      <UniqueIdentifier>{f6634afe-e702-4d67-b702-3f85a1f0c131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic">
+      <UniqueIdentifier>{2fe11b28-2a46-4061-84e1-f12af2d9b32c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\operation">
+      <UniqueIdentifier>{35aef6e2-ea9e-4d71-a280-f13778cb62f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\operation\substraction">
+      <UniqueIdentifier>{80490d4e-0d7e-4ded-97e1-19c641e74644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\operation\addition">
+      <UniqueIdentifier>{8a9e0fdc-fcf8-4f32-92b8-4a3b02bb4282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\operation\multiplication">
+      <UniqueIdentifier>{6d1d801f-d072-46fc-8ca8-5adc93350724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\operation\modulus">
+      <UniqueIdentifier>{0b4460fb-0e3c-469c-8ac1-246e9a8eca28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\operation\division">
+      <UniqueIdentifier>{7b0670b5-0f4b-437e-be2f-c8fda71a0579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\bignum">
+      <UniqueIdentifier>{7ed0fa26-d46d-49ff-9ffd-b63f6d32186d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arithmatic\bits_value">
+      <UniqueIdentifier>{2075bc19-6389-4423-8039-ca0416d2464e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
