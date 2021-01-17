@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="generic">
+      <UniqueIdentifier>{ef8614b1-5edf-46dc-ac28-a86c6e01ee78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\resource_manager">
+      <UniqueIdentifier>{54e98d61-671e-4f5d-9a42-25bf99e3e8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="minimum_spanning_tree">
+      <UniqueIdentifier>{2853b93a-a129-4767-a6b3-794c98093a48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tree_retriever">
+      <UniqueIdentifier>{d40e35a8-995b-4338-97f3-f85382bcc676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\tree_type">
+      <UniqueIdentifier>{72592a80-df16-42d3-b5ac-c15a003758b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\connect">
+      <UniqueIdentifier>{9c43726b-91f7-43a4-af94-be69eb2de021}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="resource_manager.cpp">
+      <Filter>generic\resource_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="tree_retriever_test.cpp">
+      <Filter>tree_retriever</Filter>
+    </ClCompile>
+    <ClCompile Include="tree_retriever.cpp">
+      <Filter>tree_retriever</Filter>
+    </ClCompile>
+    <ClCompile Include="minimum_spanning_tree.cpp">
+      <Filter>minimum_spanning_tree</Filter>
+    </ClCompile>
+    <ClCompile Include="minimum_spanning_tree_test.cpp">
+      <Filter>minimum_spanning_tree</Filter>
+    </ClCompile>
+    <ClCompile Include="connect.cpp">
+      <Filter>generic\connect</Filter>
+    </ClCompile>
+    <ClCompile Include="connect_test.cpp">
+      <Filter>generic\connect</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource_manager.hpp">
+      <Filter>generic\resource_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="tree_retriever.hpp">
+      <Filter>tree_retriever</Filter>
+    </ClInclude>
+    <ClInclude Include="minimum_spanning_tree.hpp">
+      <Filter>minimum_spanning_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="tree_type.hpp">
+      <Filter>generic\tree_type</Filter>
+    </ClInclude>
+    <ClInclude Include="connect.hpp">
+      <Filter>generic\connect</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
