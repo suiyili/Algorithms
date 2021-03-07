@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="generic">
+      <UniqueIdentifier>{99d9a2ea-ce30-4293-8788-162415843910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\bit_reverse_array">
+      <UniqueIdentifier>{f0236eee-f83f-4522-b1d4-79458d9be502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fourier_transform">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="fourier_transform\polynomial_transform">
+      <UniqueIdentifier>{5e107d8f-eec8-4807-8ca0-b39997810ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fourier_transform\inverse_transform">
+      <UniqueIdentifier>{4fbc241e-4650-49ef-8d89-512e4b1d7186}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\complex_matcher">
+      <UniqueIdentifier>{5498b1d2-e745-4bdb-99f1-272ade711886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="multiplication">
+      <UniqueIdentifier>{bbfab086-83d4-4ae5-91b6-cc1e25ffa421}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fourier_transform_test.cpp">
+      <Filter>fourier_transform</Filter>
+    </ClCompile>
+    <ClCompile Include="bit_reverse_array_test.cpp">
+      <Filter>generic\bit_reverse_array</Filter>
+    </ClCompile>
+    <ClCompile Include="polynomial_transform.cpp">
+      <Filter>fourier_transform\polynomial_transform</Filter>
+    </ClCompile>
+    <ClCompile Include="inverse_transform.cpp">
+      <Filter>fourier_transform\inverse_transform</Filter>
+    </ClCompile>
+    <ClCompile Include="fourier_transform.cpp">
+      <Filter>fourier_transform</Filter>
+    </ClCompile>
+    <ClCompile Include="complex_matcher.cpp">
+      <Filter>generic\complex_matcher</Filter>
+    </ClCompile>
+    <ClCompile Include="multiplication_test.cpp">
+      <Filter>multiplication</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fourier_transform.hpp">
+      <Filter>fourier_transform</Filter>
+    </ClInclude>
+    <ClInclude Include="bit_reverse_array.hpp">
+      <Filter>generic\bit_reverse_array</Filter>
+    </ClInclude>
+    <ClInclude Include="bit_reverse_array.h">
+      <Filter>generic\bit_reverse_array</Filter>
+    </ClInclude>
+    <ClInclude Include="fft_types.hpp">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="polynomial_transform.hpp">
+      <Filter>fourier_transform\polynomial_transform</Filter>
+    </ClInclude>
+    <ClInclude Include="inverse_transform.hpp">
+      <Filter>fourier_transform\inverse_transform</Filter>
+    </ClInclude>
+    <ClInclude Include="complex_matcher.hpp">
+      <Filter>generic\complex_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="multiplication.h">
+      <Filter>multiplication</Filter>
+    </ClInclude>
+    <ClInclude Include="multiplication.hpp">
+      <Filter>multiplication</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

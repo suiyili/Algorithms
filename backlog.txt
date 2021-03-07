@@ -1,12 +1,8 @@
 PatternMatch
 
 tasks:
-study minumum spanning tree.
-1. each cut chooses the light edge means choose the lightest link between each unique pair.
-so the total weights are minimum finally.
-
-3. refactor connect to make it from-to exchangeable.
-3.1 hide from and to , use func and swap from > to (since triangle matrix, cut diagonal)
+1. fft multi-threading execution policy
+2. polynomial/bignum multiplication.
 
 minimum spin tree.
 Graph theory, flow...
