@@ -1,4 +1,3 @@
-#pragma once
 #ifdef TEST
 
 #include <catch2/catch.hpp>

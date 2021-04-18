@@ -1,8 +1,6 @@
 #pragma once
 
-#include <queue>
 #include <unordered_set>
-
 #include "tree_retriever.hpp"
 #include "tree_type.hpp"
 

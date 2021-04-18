@@ -1,11 +1,9 @@
 PatternMatch
 
 tasks:
-1. fft multi-threading execution policy
-2. polynomial/bignum multiplication.
+Graph theory: shortest path
+1. impl priority queue template <typename T>
+1.1 tdd sink
 
-minimum spin tree.
-Graph theory, flow...
-FFT
-Mobius transform lib.
+Graph theory, max-flow.
 

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="generic">
+      <UniqueIdentifier>{6b75ae45-6e41-4f98-90fd-55b932ab49b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\priority_queue">
+      <UniqueIdentifier>{797938f6-cca2-4b2c-a3da-a6fcda4b14d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\resource_manager">
+      <UniqueIdentifier>{83de9fd4-637f-4a1e-b38f-5bd328a4b46d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\item">
+      <UniqueIdentifier>{91ea611a-45af-4981-accc-191aa6c19a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shortest_path_finder">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="priority_queue.h">
+      <Filter>generic\priority_queue</Filter>
+    </ClInclude>
+    <ClInclude Include="priority_queue.hpp">
+      <Filter>generic\priority_queue</Filter>
+    </ClInclude>
+    <ClInclude Include="resource_manager.hpp">
+      <Filter>generic\resource_manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="priority_queue_test.cpp">
+      <Filter>generic\priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="resource_manager.cpp">
+      <Filter>generic\resource_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="shortest_path_finder_test.cpp">
+      <Filter>shortest_path_finder</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

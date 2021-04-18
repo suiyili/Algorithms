@@ -1,6 +1,6 @@
 #include "minimum_spanning_tree.hpp"
-
 #include "resource_manager.hpp"
+#include <queue>
 
 namespace tree::spanning_tree {
 
