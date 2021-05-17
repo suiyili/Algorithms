@@ -41,7 +41,7 @@ SCENARIO("priority queue test", "[priority_queue]") {
         queue.update(&(numbers[1]));
         THEN("the queue should pop new ascent numbers")
         {
-          std::vector<int> expected{ -10, -3, -1, 0, 1, 2, 9, 12 };
+          std::vector<int> expected{ -10, -3, 0, 1, 2, 8, 9, 12 };
           decltype(expected) actual;
           while (auto i = queue.pop())
             actual.push_back(*i);

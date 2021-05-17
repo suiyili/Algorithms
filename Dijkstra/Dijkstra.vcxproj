@@ -23,14 +23,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="item.hpp" />
     <ClInclude Include="priority_queue.h" />
     <ClInclude Include="priority_queue.hpp" />
     <ClInclude Include="resource_manager.hpp" />
+    <ClInclude Include="shortest_path.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="item.cpp" />
     <ClCompile Include="priority_queue_test.cpp" />
     <ClCompile Include="resource_manager.cpp" />
-    <ClCompile Include="shortest_path_finder_test.cpp" />
+    <ClCompile Include="shortest_path.cpp" />
+    <ClCompile Include="shortest_path_test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

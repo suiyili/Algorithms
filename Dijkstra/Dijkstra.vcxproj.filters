@@ -13,7 +13,7 @@
     <Filter Include="generic\item">
       <UniqueIdentifier>{91ea611a-45af-4981-accc-191aa6c19a47}</UniqueIdentifier>
     </Filter>
-    <Filter Include="shortest_path_finder">
+    <Filter Include="shortest_path">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
@@ -31,6 +31,12 @@
     <ClInclude Include="resource_manager.hpp">
       <Filter>generic\resource_manager</Filter>
     </ClInclude>
+    <ClInclude Include="item.hpp">
+      <Filter>generic\item</Filter>
+    </ClInclude>
+    <ClInclude Include="shortest_path.hpp">
+      <Filter>shortest_path</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="priority_queue_test.cpp">
@@ -39,8 +45,14 @@
     <ClCompile Include="resource_manager.cpp">
       <Filter>generic\resource_manager</Filter>
     </ClCompile>
-    <ClCompile Include="shortest_path_finder_test.cpp">
-      <Filter>shortest_path_finder</Filter>
+    <ClCompile Include="shortest_path_test.cpp">
+      <Filter>shortest_path</Filter>
+    </ClCompile>
+    <ClCompile Include="item.cpp">
+      <Filter>generic\item</Filter>
+    </ClCompile>
+    <ClCompile Include="shortest_path.cpp">
+      <Filter>shortest_path</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

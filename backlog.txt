@@ -2,8 +2,11 @@ PatternMatch
 
 tasks:
 Graph theory: shortest path
-1. impl priority queue template <typename T>
-1.1 tdd sink
+2. implement dijkstra
+3. apply to linear programming.
 
-Graph theory, max-flow.
-
+Fabonacci heap.
+Number-theoritic algorithm.
+merge sort.
+revisit LinearAlgebra(Matrix op) according to 'art of computation'
+Graph: network flow, max-flow.
