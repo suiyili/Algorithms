@@ -1,0 +1,32 @@
+setup MinGW64
+install msys, then msys cmd
+$>pacman -S mingw-w64-x86_64-gcc
+$>pacman -S mingw-w64-x86_64-make
+$>pacman -S mingw-w64-x86_64-gdb
+$>pacman -S git
+$>pacman -Syuu (upgrade to latest version)
+$>pacman -Q (show pacakge info)
+add [path\to\msys64\mingw64\bin]\ to env PATH
+add [path\to\msys64\user\bin]\ to env PATH
+
+setup IDE
+add MinGW as toolchain, it will find most of settings automatically,
+but for "Build Tool", select path\to\msys64\mingw64\bin\mingw32-make.exe
+optional: select debugger to "MinGW-w64 GDB", which only support console debug.
+in settings->tools->terminal use path\to\msys64\user\bin\bash.exe as terminal
+
+setup Catch2
+$>git clone https://github.com/catchorg/Catch2.git //need catch2 3.0 branch
+1.use IDE to open catch2 cmake project and add -DCMAKE_INSTALL_PREFIX={install/path} as cmake flag
+2. build all in debug, then install
+
+setup eigen
+$>https://gitlab.com/libeigen/eigen.git
+1.use IDE to open eigen cmake project and add -DCMAKE_INSTALL_PREFIX={install/path} as cmake flag
+2. build all in debug, then install
+
+
+setup Project
+in root CMakeLists.txt
+for both Catch2 and eigen
+set(CMAKE_PREFIX_PATH  {install/path})

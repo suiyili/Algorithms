@@ -1,0 +1,19 @@
+
+BalancedBinaryTree:
+4. refactor node_remover and test
+5. refactor rb_tree and test
+5.1 add multi-threading read and write test.
+
+Disjoint set
+1. find bi-direct pairs by iterating n*m.
+2. hash<id, count, parent>.
+2.1 given a pair, create/find and return pair parents ref.
+2.2 larger id parent -> smaller id, update smaller id count += larger id count.
+
+
+
+refactor game-of-life.
+Number-theoritic algorithm in introduction to algo.
+merge sort.
+revisit LinearAlgebra(Matrix op) according to 'art of computation'
+Graph: network flow, max-flow.
