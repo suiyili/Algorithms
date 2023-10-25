@@ -9,7 +9,7 @@ using rb_node_t = rb_node<int>;
 using node_inserter_t = node_inserter<int>;
 
 const int existing_key = 1;
-static typename rb_node_t::shared_rb_node_t set_up_tree();
+static typename rb_node_t::node_handle_t set_up_tree();
 
 SCENARIO("node inserter test", "[node_inserter]") {
   GIVEN("a rb-tree with items setup") {
@@ -19,8 +19,8 @@ SCENARIO("node inserter test", "[node_inserter]") {
       const int key_to_insert = 4;
       node_inserter_t inserter(key_to_insert);
       tree_visitor_i<int> &visitor = inserter;
-      root = visitor.visit(root);
-
+      visitor.visit(root);
+      auto root_ptr = root.load(std::memory_order_relaxed);
       THEN("it should follow red black tree insert rule") {
         /*
           expected result:
@@ -33,10 +33,10 @@ SCENARIO("node inserter test", "[node_inserter]") {
                 4(r)          15(r)
 
         */
-        REQUIRE(((int)*root == 7));
-        REQUIRE(root->color() == 1U);
+        REQUIRE(((int)*root_ptr == 7));
+        REQUIRE(root_ptr->color() == 1U);
 
-        auto left = root->get_child(side::left);
+        auto left = root_ptr->get_child(side::left);
         REQUIRE(((int)*left == 2));
         REQUIRE(left->color() == 0U);
 
@@ -52,7 +52,7 @@ SCENARIO("node inserter test", "[node_inserter]") {
         REQUIRE(((int)*lrl == 4));
         REQUIRE(lrl->color() == 0U);
 
-        auto right = root->get_child(side::right);
+        auto right = root_ptr->get_child(side::right);
         REQUIRE(((int)*right == 11));
         REQUIRE(right->color() == 0U);
 
@@ -81,7 +81,7 @@ SCENARIO("node inserter test", "[node_inserter]") {
   }
 }
 
-inline typename rb_node_t::shared_rb_node_t set_up_tree() {
+inline typename rb_node_t::node_handle_t set_up_tree() {
   /*
                      11(b)
                    /       \
@@ -117,7 +117,7 @@ inline typename rb_node_t::shared_rb_node_t set_up_tree() {
   i_11->set_child(i_2, side::left);
   i_11->set_child(i_14, side::right);
 
-  return i_11;
+  return typename rb_node_t::node_handle_t{i_11};
 }
 
 } // namespace btree::algorithm

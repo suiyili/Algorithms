@@ -7,23 +7,25 @@ namespace btree::algorithm {
 
 using rb_node_t = rb_node<int>;
 
-using rb_node_shared_t = rb_node_t::shared_rb_node_t;
+using rb_node_shared_t = rb_node_t::shared_node_t;
+using rb_node_handle_t = rb_node_t::node_handle_t;
 
 class tree_with_three_level final {
 public:
   tree_with_three_level();
-  rb_node_shared_t get_parent(bool with_dummy_root = false);
+
+  rb_node_handle_t &get_root();
+  rb_node_shared_t get_parent();
   rb_node_shared_t get_child(side which);
   rb_node_shared_t get_grand_child(side which_child, side which_grand);
 private:
-  rb_node_shared_t root_;
+  rb_node_handle_t root_;
 };
 
 SCENARIO("regulate consecutive red test", "[regulate_consecutive_red]") {
 
   GIVEN("a pair of consecutive red nodes") {
     tree_with_three_level tree;
-    auto root = tree.get_parent(true);
     auto parent = tree.get_parent();
 
     auto left_child = tree.get_child(side::left);
@@ -42,9 +44,9 @@ SCENARIO("regulate consecutive red test", "[regulate_consecutive_red]") {
 
       WHEN("regulate the consecutive red nodes") {
         consecutive_red_regulator<int> regulator;
-        auto regulated = regulator.regulate(left_child, side::right);
-        regulated &= regulator.regulate(parent, side::left);
-        regulated &= regulator.regulate(root, side::left); //root left is parent.
+        auto regulated = regulator.regulate(left_child->get_child_handle(side::right), side::right);
+        regulated &= regulator.regulate(parent->get_child_handle(side::left), side::left);
+        regulated &= regulator.regulate(tree.get_root(), side::left);
 
         THEN("root will push down color") {
           REQUIRE(regulated);
@@ -60,9 +62,9 @@ SCENARIO("regulate consecutive red test", "[regulate_consecutive_red]") {
       CHECK(right_child->color() == 1);
       WHEN("regulate the consecutive red nodes") {
         consecutive_red_regulator<int> regulator;
-        auto regulated = regulator.regulate(left_child, side::right);
-        regulated &= regulator.regulate(parent, side::left);
-        regulated &= regulator.regulate(root, side::left);
+        auto regulated = regulator.regulate(left_child->get_child_handle(side::right), side::right);
+        regulated &= regulator.regulate(parent->get_child_handle(side::left), side::left);
+        regulated &= regulator.regulate(tree.get_root(), side::left);
 
         THEN("root will rotate the consecutive red nodes") {
           REQUIRE(regulated);
@@ -94,8 +96,8 @@ SCENARIO("regulate consecutive red test", "[regulate_consecutive_red]") {
 
     WHEN("regulate the nodes") {
       consecutive_red_regulator<int> regulator;
-      auto regulated = regulator.regulate(left_child, side::right);
-      regulated &= regulator.regulate(parent, side::left);
+      auto regulated = regulator.regulate(left_child->get_child_handle(side::right), side::right);
+      regulated &= regulator.regulate(parent->get_child_handle(side::left), side::left);
       THEN("it should failed") {
         REQUIRE_FALSE(regulated);
       }
@@ -104,10 +106,9 @@ SCENARIO("regulate consecutive red test", "[regulate_consecutive_red]") {
 }
 
 tree_with_three_level::tree_with_three_level()
-    : root_(std::make_shared<rb_node_t>(0)) {
-  auto parent = std::make_shared<rb_node_t>(4);
+    : root_(std::make_shared<rb_node_t>(4)) {
+  auto parent = root_.load(std::memory_order_acquire);
   parent->increase_color();
-  root_->set_child(parent, side::left);
 
   auto left_child = std::make_shared<rb_node_t>(2);
   left_child->increase_color();
@@ -132,15 +133,21 @@ tree_with_three_level::tree_with_three_level()
   right_child->set_child(right_right_grand, side::right);
 
 }
-rb_node_shared_t tree_with_three_level::get_parent(bool with_dummy_root) {
-  return with_dummy_root ? root_ : root_->get_child(side::left);
+rb_node_handle_t& tree_with_three_level::get_root() {
+  return root_;
 }
+
+rb_node_shared_t tree_with_three_level::get_parent() {
+  return root_.load(std::memory_order_relaxed);
+}
+
 rb_node_shared_t tree_with_three_level::get_child(side which) {
-  auto parent = root_->get_child(side::left);
+  auto parent = root_.load(std::memory_order_relaxed);
   return parent->get_child(which);
 }
+
 rb_node_shared_t tree_with_three_level::get_grand_child(side which_child, side which_grand) {
-  auto parent = root_->get_child(side::left);
+  auto parent = root_.load(std::memory_order_relaxed);
   auto child = parent->get_child(which_child);
   return child->get_child(which_grand);
 }

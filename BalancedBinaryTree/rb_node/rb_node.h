@@ -4,6 +4,8 @@
 #include <memory>
 #include <stack>
 #include <memory>
+#include <cstdint>
+#include <functional>
 
 using namespace btree::generic;
 
@@ -20,10 +22,11 @@ template<comparable_key key_t_>
 class rb_node final {
 public:
   using value_type_t = key_t_;
-  using shared_rb_node_t = std::shared_ptr<rb_node<key_t_>>;
+  using shared_node_t = std::shared_ptr<rb_node<key_t_>>;
+  using node_handle_t = std::atomic<shared_node_t>;
 
-  template<typename... _key_args>
-  explicit rb_node(_key_args &&... args);
+  template<typename... key_args>
+  explicit rb_node(key_args &&... args);
 
   ~rb_node() = default;
 
@@ -34,44 +37,26 @@ public:
 
   [[nodiscard]] std::uint8_t color() const;
   void increase_color();
-  bool decrease_color();
-
-  void pull_up_color_raw();
-  void push_down_color_raw();
+  void decrease_color();
 
   void pull_up_color();
   void push_down_color();
 
-  rb_node *&get_raw_child(side which);
-  shared_rb_node_t get_child(side which);
-  void set_child(shared_rb_node_t child, side which);
-  void rotate(side parent_side, side child_side);
+  shared_node_t get_child(side which);
+  void set_child(shared_node_t child, side which);
+  node_handle_t &get_child_handle(side which);
 
+  template<typename k_t_>
+  friend void rotate(std::atomic<std::shared_ptr<rb_node<k_t_>>>& parent, side which);
 private:
-  using atomic_shared_rb_node_t = std::atomic<shared_rb_node_t>;
-  atomic_shared_rb_node_t& get_child_ref(side which);
-
-  void pull_up_color_raw(rb_node *child);
-  void push_down_color_raw(rb_node *child);
-
-  void pull_up_color(shared_rb_node_t child);
-  void push_down_color(shared_rb_node_t child);
 
   key_t_ key_;
   unsigned char color_ = 0U;
-  rb_node *left_ = nullptr;
-  rb_node *right_ = nullptr;
-  atomic_shared_rb_node_t atomic_left_;
-  atomic_shared_rb_node_t atomic_right_;
+  node_handle_t atomic_left_;
+  node_handle_t atomic_right_;
 };
 
 template<comparable_key key_t_>
-void rotate_raw(rb_node<key_t_> *&item, side which);
-
-template<comparable_key key_t_>
-using branch_raw_t = std::stack<std::reference_wrapper<rb_node<key_t_> *>>;
-
-template<comparable_key key_t_>
-using branch_t = std::stack<std::pair<typename rb_node<key_t_>::shared_rb_node_t, side>>;
+using branch_stack_t = std::stack<std::pair<std::reference_wrapper<typename rb_node<key_t_>::node_handle_t>, side>>;
 
 } // namespace btree::node

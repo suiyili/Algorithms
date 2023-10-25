@@ -17,10 +17,10 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
      *                / \
      *             5(b) 8(b)
      * */
-    auto root = std::make_shared<rb_node_t>(0); //dummy
     auto parent = std::make_shared<rb_node_t>(3);
+    rb_node_t::node_handle_t root{parent};
+
     parent->increase_color();
-    root->set_child(parent, side::left);
 
     auto x_child = std::make_shared<rb_node_t>(1);
     x_child->increase_color();
@@ -40,21 +40,14 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
 
     CHECK(x_child->color() == 1U);
     CHECK(right_child->color() == 1U);
-    AND_GIVEN("force it as dual black") {
-      dual_black_regulator<int> regulator(side::left, true);
-      WHEN("regulate x child") {
-        THEN("it will regulate color") {
-          REQUIRE(regulator.regulate(root, side::left));
-        }
-      }
-    }AND_GIVEN("it as single black") {
-      dual_black_regulator<int> regulator(side::left, false);
-      WHEN("regulate x child") {
-        THEN("it will do nothing") {
-          REQUIRE_FALSE(regulator.regulate(root, side::left));
-        }
+
+    dual_black_regulator<int> regulator(side::left);
+    WHEN("regulate x child") {
+      THEN("it will do nothing") {
+        REQUIRE_FALSE(regulator.regulate(root, side::left));
       }
     }
+
   }
 
   GIVEN("x child and red sibling") {
@@ -64,10 +57,9 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
      *            /   \
      *          6(b)  8(b)
      * */
-    auto root = std::make_shared<rb_node_t>(0); //dummy value
     auto parent = std::make_shared<rb_node_t>(3);
+    rb_node_t::node_handle_t root{parent};
     parent->increase_color();
-    root->set_child(parent, side::left);
 
     auto x_child = std::make_shared<rb_node_t>(1);
     x_child->increase_color();
@@ -102,7 +94,7 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
      *
      * */
 
-      parent = root->get_child(side::left);
+      parent = root.load(std::memory_order_acquire);
       auto old_parent = parent->get_child(side::left);
       THEN("it will rotate the red sibling to top") {
         REQUIRE((int) *parent == 7);
@@ -127,14 +119,13 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
      *            /    \
      *         5(r/b)  8(b)
      * */
-    auto root = std::make_shared<rb_node_t>(0); //dummy value
     auto parent = std::make_shared<rb_node_t>(3);
-    root->set_child(parent, side::left);
+    rb_node_t::node_handle_t root{parent};
 
     auto x_child = std::make_shared<rb_node_t>(1);
     x_child->increase_color();
     x_child->increase_color();
-    parent->set_child(x_child,side::left);
+    parent->set_child(x_child, side::left);
 
     auto right_child = std::make_shared<rb_node_t>(7);
     right_child->increase_color();
@@ -143,7 +134,7 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
     auto rl_grand = std::make_shared<rb_node_t>(5);
     right_child->set_child(rl_grand, side::left);
 
-    auto rr_grand= std::make_shared<rb_node_t>(8);
+    auto rr_grand = std::make_shared<rb_node_t>(8);
     rr_grand->increase_color();
     right_child->set_child(rr_grand, side::right);
 
@@ -173,17 +164,17 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
         dual_black_regulator<int> regulator(side::left);
         regulator.regulate(root, side::left);
 
-        parent = root->get_child(side::left);
+        parent = root.load(std::memory_order_acquire);
         THEN("it should pull up color to parent") {
-          REQUIRE((int)*parent == 3);
+          REQUIRE((int) *parent == 3);
           REQUIRE(parent->color() == 1U);
         }THEN("it will decrease x child color") {
           x_child = parent->get_child(side::left);
-          REQUIRE((int)*x_child == 1);
+          REQUIRE((int) *x_child == 1);
           REQUIRE(x_child->color() == 1U);
         }THEN("it will decrease x nephew color") {
           right_child = parent->get_child(side::right);
-          REQUIRE((int)*right_child == 7);
+          REQUIRE((int) *right_child == 7);
           REQUIRE(right_child->color() == 0U);
         }
       }
@@ -212,28 +203,28 @@ SCENARIO("dual black regulator test", "[dual_black_regulator]") {
       WHEN("regulate x child") {
         dual_black_regulator<int> regulator(side::left);
         regulator.regulate(root, side::left);
-         /*           5(b)
-          *         /      \
-          *      3(b)      7(b)
-          *     /   \     /   \
-          *  1(b)  4(b)  6(b)  8(b)
-        * */
+        /*           5(b)
+         *         /      \
+         *      3(b)      7(b)
+         *     /   \     /   \
+         *  1(b)  4(b)  6(b)  8(b)
+       * */
         // two red nodes 3->5(right) happens during operation.
-        parent = root->get_child(side::left);
+        parent = root.load(std::memory_order_acquire);
         auto left_child = parent->get_child(side::left);
         THEN("it will rotate closest nephew as parent") {
-          REQUIRE((int)*parent == 5);
+          REQUIRE((int) *parent == 5);
           REQUIRE(parent->color() == 0);
         }THEN("the old parent will become left child") {
-          REQUIRE((int)*left_child == 3); //old parent
+          REQUIRE((int) *left_child == 3); //old parent
           REQUIRE(left_child->color() == 1);
         }THEN("right child will remain") {
           right_child = parent->get_child(side::right);
-          REQUIRE((int)*right_child == 7);
+          REQUIRE((int) *right_child == 7);
           REQUIRE(right_child->color() == 1U);
         }THEN("it will decrease x child color") {
           auto ll_grand = left_child->get_child(side::left);
-          REQUIRE((int)*ll_grand == 1); //old x child
+          REQUIRE((int) *ll_grand == 1); //old x child
           REQUIRE(ll_grand->color() == 1U);
         }
       }
