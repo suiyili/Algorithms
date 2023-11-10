@@ -1,18 +1,22 @@
+BalancedBinaryTree:
+1. refactor node_inserter/test to return insert branch
+2. refactor consecutive_red_regulator/test to regulate on the branch.
+3. refactor node_remover/test return removing branch.
+4. refactor dual_black_regulator/test to regulate on the branch
+5. refactor rb_tree to use above change.
+6. get rid of tree_visitor_i.
 
+Parallel algo:
+refactor quick sort with parallel exec.
+refactor game-of-life with muti-threading parallel exec.
 
-Disjoint set
-1. find bi-direct pairs by iterating n*m.
-2. hash<id, count, parent>.
-2.1 given a pair, create/find and return pair parents ref.
-2.2 larger id parent -> smaller id, update smaller id count += larger id count.
+revisit Matrix/linear programming according to 'intro algo' and 'art of computation'
+Graph: network flow, max-flow.
+Number-theoritic algorithm in introduction to algo.
+merge sort.
 
 refactor DNN:
 1.1 study Eigen with openmp setting(mingw gcc built-in) or cuda?.
 1.2 combine rnn and cnn to research innovative design
 
 
-refactor game-of-life.
-Number-theoritic algorithm in introduction to algo.
-merge sort.
-revisit LinearAlgebra(Matrix op) according to 'art of computation'
-Graph: network flow, max-flow.

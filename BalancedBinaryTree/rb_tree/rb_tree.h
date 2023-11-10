@@ -1,7 +1,6 @@
 #pragma once
 
 #include <rb_node/rb_node.hpp>
-#include "tree_visitor_i.hpp"
 #include <memory>
 
 namespace btree {
@@ -18,7 +17,10 @@ public:
 
   bool contains(const key_t_ &key);
 
-  void accept(tree_visitor_i<key_t_> &visitor);
+  template<typename ... args_>
+  void insert(args_&& ... args);
+
+  void remove(const key_t_ key);
 
 private:
 #ifdef TEST

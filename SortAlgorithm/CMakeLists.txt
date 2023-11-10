@@ -1,4 +1,4 @@
-cmake_minimum_required()
+cmake_minimum_required(VERSION 2.26)
 project(SortAlgorithm)
 
 include(../base.cmake)

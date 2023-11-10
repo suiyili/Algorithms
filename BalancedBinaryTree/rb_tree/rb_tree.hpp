@@ -1,5 +1,11 @@
 #include "rb_tree.h"
+#include <algo/insert_node/insert_node.hpp>
+#include <algo/remove_node/remove_node.hpp>
+#include <algo/regulate_red/regulate_red.hpp>
+#include <algo/regulate_black/regulate_black.hpp>
 #include <atomic>
+
+using namespace btree::algo;
 
 namespace btree {
 
@@ -23,8 +29,17 @@ inline bool rb_tree<key_t_>::contains(const key_t_ &key) {
   return false;
 }
 
-template <comparable_key key_t_>
-inline void rb_tree<key_t_>::accept(tree_visitor_i<key_t_> &visitor) {
-  visitor.visit(root_);
+template<comparable_key key_t_>
+template<typename... args_>
+void rb_tree<key_t_>::insert(args_ &&... args) {
+  auto branch = insert_node(root_, std::make_unique<rb_node<key_t_>>(std::forward<args_>(args)...));
+  regulate_red<key_t_>(branch);
 }
+
+template<comparable_key key_t_>
+void rb_tree<key_t_>::remove(const key_t_ key) {
+  auto remover = remove_node(root_, key);
+  regulate_black<key_t_>(remover.get_branch());
+}
+
 } // namespace btree
