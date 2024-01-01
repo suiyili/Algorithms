@@ -1,10 +1,13 @@
 #include "generic/utility.hpp"
 #include <utility>
-#include "generic/utility.hpp"
+#include <ranges>
 
 using namespace generic;
 
 namespace sort_algo {
+
+template<std::ranges::forward_range range_t_>
+std::ranges::iterator_t<range_t_> make_partition(range_t_& sequence);
 
 template <RandomAccessIterator Iterator> class partitioner {
 public:

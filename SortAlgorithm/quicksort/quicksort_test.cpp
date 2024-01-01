@@ -2,7 +2,7 @@
 
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/matchers/catch_matchers_all.hpp>
-#include "quicksort.hpp"
+#include <quicksort/quicksort.hpp>
 #include <array>
 
 using namespace Catch::Matchers;

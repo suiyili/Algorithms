@@ -1,6 +1,6 @@
 #pragma once
 #include "quicksort.h"
-#include "quicksort/partitioner/partitioner.hpp"
+#include <quicksort/partition/partition.hpp>
 #include <forward_list>
 
 namespace sort_algo {

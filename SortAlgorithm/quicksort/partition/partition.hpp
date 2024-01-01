@@ -1,8 +1,30 @@
 #pragma once
-#include "partitioner.h"
+#include "partition.h"
 #include <stdexcept>
 
 namespace sort_algo {
+
+template<std::ranges::forward_range range_t_>
+inline std::ranges::iterator_t<range_t_> make_partition(range_t_& sequence) {
+  /*
+   * partition iter pi start from rbegin(end), front iter fi start begin.
+   * 1 if pi.base() == fi, then exit loop
+   * 2 if item[pi] >= item[last], move pi one step
+   * 3 otherwise swap item[pi] with item[fi] and move fi one step
+  */
+  auto front = sequence.begin();
+  auto partition = std::make_reverse_iterator(sequence.end());
+  auto last = partition;
+  while(front != partition.base()) {
+    if(*partition < *last) {
+      std::swap(*partition, *front);
+      ++front;
+    } else
+      ++partition;
+  }
+  return partition.base();
+}
+
 template <RandomAccessIterator Iterator>
 inline partitioner<Iterator>::partitioner(Iterator begin, Iterator end,
                                           compare_func<Iterator> comp) 
