@@ -1,4 +1,5 @@
-setup MinGW64
+1. Setup 
+1.1 MinGW64
 install msys, then msys cmd
 $>pacman -S mingw-w64-x86_64-gcc
 $>pacman -S mingw-w64-x86_64-make
@@ -9,16 +10,30 @@ $>pacman -Q (show pacakge info)
 add [path\to\msys64\mingw64\bin]\ to env PATH
 add [path\to\msys64\user\bin]\ to env PATH
 
-setup IDE
-add MinGW as toolchain, it will find most of settings automatically,
+Or 
+1.2 Docker
+Install docker
+$>cd Algorithms
+$>docker build -t alpine:compiler -f Dockerfile .
+
+
+2 Setup IDE
+2.1. add MinGW as toolchain, it will find most of settings automatically,
 but for "Build Tool", select path\to\msys64\mingw64\bin\mingw32-make.exe
 optional: select debugger to "MinGW-w64 GDB", which only support console debug.
 in settings->tools->terminal use path\to\msys64\user\bin\bash.exe as terminal
+Or
+2.2
+In Clion->Settings->Build,Execution,Deployment->Toolchains, then [+]add Docker
+For "image": select alpine:compiler
+For "Container Settings" click settings icon, "Volume bindings" add [path/to/projects] as Host and /tmp as Container path.
+In Clion->Settings->Build,Execution,Deployment->cmake,
+Select docker as toolchain.
 
 setup Catch2
 $>git clone https://github.com/catchorg/Catch2.git //need catch2 3.0 branch
-1.use IDE to open catch2 cmake project and add -DCMAKE_INSTALL_PREFIX={install/path} as cmake flag
-2. build all in debug, then install
+1.use IDE to open catch2 cmake project and add -DCMAKE_INSTALL_PREFIX={[container/]install/path/} for example /tmp/Catch2/Catch as cmake flag
+2. build target Catch2WithMain in debug, then install
 
 setup eigen
 $>https://gitlab.com/libeigen/eigen.git
